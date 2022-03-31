@@ -1,0 +1,105 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-03-31T11:35:32.974Z",
+  "__export_source": "insomnia.desktop.app:v2021.3.0",
+  "resources": [
+    {
+      "_id": "req_f330ca74a30b4b6bb507f30abd133343",
+      "parentId": "wrk_29e3cbbb341e45a5a84f067cbb8c2eee",
+      "modified": 1648725317983,
+      "created": 1648725267198,
+      "url": "{{ _.baseURL }}/user/",
+      "name": "Create User",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Gabriel\",\n  \"email\": \"teste@email.com\",\n  \"telefone\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_21c123ac05cf495cbfc16bd5ddebd3d7"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1648725267198,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_29e3cbbb341e45a5a84f067cbb8c2eee",
+      "parentId": null,
+      "modified": 1648683154538,
+      "created": 1648683154538,
+      "name": "brisaPIX",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_67a8ae350b2c4fb283a563b97ddc5f71",
+      "parentId": "wrk_29e3cbbb341e45a5a84f067cbb8c2eee",
+      "modified": 1648725251412,
+      "created": 1648683178544,
+      "url": "{{ _.baseURL }}/user/hello",
+      "name": "Hello User",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1648683178544,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_04d2dbda98a099e586b5f4a745737317b492d234",
+      "parentId": "wrk_29e3cbbb341e45a5a84f067cbb8c2eee",
+      "modified": 1648683207941,
+      "created": 1648683154737,
+      "name": "Base Environment",
+      "data": { "baseURL": "localhost:3333" },
+      "dataPropertyOrder": { "&": ["baseURL"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1648683154737,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_04d2dbda98a099e586b5f4a745737317b492d234",
+      "parentId": "wrk_29e3cbbb341e45a5a84f067cbb8c2eee",
+      "modified": 1648683154740,
+      "created": 1648683154740,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_563b5b981fe5458a8800425672a70405",
+      "parentId": "wrk_29e3cbbb341e45a5a84f067cbb8c2eee",
+      "modified": 1648683154544,
+      "created": 1648683154544,
+      "fileName": "brisaPIX",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
