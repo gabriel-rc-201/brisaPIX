@@ -1,6 +1,7 @@
 import { inject, injectable } from "tsyringe";
 
 import { ITransacoesRepository } from "modules/transacao/repositories/ITransacoesRepository";
+import { Transacao } from "modules/transacao/entities/Transacao";
 
 @injectable()
 class ListUserTransacoesUseCase {
@@ -9,8 +10,12 @@ class ListUserTransacoesUseCase {
     private transacoesRepository: ITransacoesRepository
   ) {}
 
-  async execute(user_sender_id: string) {
-    await this.transacoesRepository.listByUserSenderId(user_sender_id);
+  async execute(user_sender_id: string): Promise<Transacao[]> {
+    const transacoes = await this.transacoesRepository.listByUserSenderId(
+      user_sender_id
+    );
+
+    return transacoes;
   }
 }
 
