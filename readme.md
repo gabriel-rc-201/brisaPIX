@@ -40,7 +40,7 @@
 
 - [x] Usuários
   - [x] O usuário deve possuir nome (nome do usuário), telefone (telefone do usuário), email e um id.
-- Chaves.
-  - A entidade chaves deve possuir um valor (referente a chave a ser salva), id e a relação com o usuário dono da chave.
+- [x] Chaves.
+  - [x] A entidade chaves deve possuir um valor (referente a chave a ser salva), id e a relação com o usuário dono da chave.
 - Transações.
   - A transação deve possuir um valor (referente ao valor em R$ da transação), relação com quem envia e quem recebe o PIX (usuário que envia e usuário que recebe o PIX) e um id.
