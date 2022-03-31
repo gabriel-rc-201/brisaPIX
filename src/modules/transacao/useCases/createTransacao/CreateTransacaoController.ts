@@ -14,7 +14,7 @@ class CreateTransacaoController {
       user_reciever_chave,
     });
 
-    return res.status(201);
+    return res.status(201).send();
   }
 }
 
