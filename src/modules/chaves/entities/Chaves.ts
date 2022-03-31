@@ -11,6 +11,9 @@ class Chave {
   @Column()
   key: string;
 
+  @Column()
+  user_id: string;
+
   @JoinColumn({ name: "user_id" })
   @ManyToOne(() => User)
   userId: User;
