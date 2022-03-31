@@ -1,4 +1,4 @@
-import { Chave } from "../entities/Chaves";
+import { Chave } from "../entities/Chave";
 
 interface ICreateChaveDTO {
   id?: string;

@@ -2,8 +2,8 @@ import { container } from "tsyringe";
 
 import { IUserRepository } from "modules/user/repositories/IUsersRepository";
 import { UsersRepository } from "modules/user/repositories/implementations/UsersRepository";
-import { IChavesRepository } from "modules/chaves/repositories/IChavesRepository";
-import { ChavesRepository } from "modules/chaves/repositories/implementations/ChavesRepository";
+import { IChavesRepository } from "modules/chave/repositories/IChavesRepository";
+import { ChavesRepository } from "modules/chave/repositories/implementations/ChavesRepository";
 
 container.registerSingleton<IUserRepository>(
   "UsersRepository",

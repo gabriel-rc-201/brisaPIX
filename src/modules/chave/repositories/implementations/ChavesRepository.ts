@@ -1,13 +1,15 @@
 import { getRepository, Repository } from "typeorm";
 
-import { Chave } from "modules/chaves/entities/Chaves";
+import { Chave } from "modules/chave/entities/Chave";
 import { IChavesRepository, ICreateChaveDTO } from "../IChavesRepository";
 
 class ChavesRepository implements IChavesRepository {
   private repository: Repository<Chave>;
 
   constructor() {
+    console.log("entrei no constructor");
     this.repository = getRepository(Chave);
+    console.log(this.repository);
   }
 
   async create({ id, key, user_id }: ICreateChaveDTO): Promise<void> {

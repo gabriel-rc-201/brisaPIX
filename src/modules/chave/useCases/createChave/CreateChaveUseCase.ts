@@ -3,7 +3,7 @@ import { inject, injectable } from "tsyringe";
 import {
   IChavesRepository,
   ICreateChaveDTO,
-} from "modules/chaves/repositories/IChavesRepository";
+} from "modules/chave/repositories/IChavesRepository";
 
 @injectable()
 class CreateChaveUseCase {
