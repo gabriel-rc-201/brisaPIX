@@ -3,14 +3,14 @@ import { Chave } from "../entities/Chaves";
 interface ICreateChaveDTO {
   id?: string;
   key: string;
-  userId: string;
+  user_id: string;
 }
 
 interface IChavesRepository {
   create(data: ICreateChaveDTO): Promise<void>;
-  findChaveByUser(userId: string): Promise<Chave[]>;
+  findChaveByUser(user_id: string): Promise<[Chave[], number]>;
   findChaveByKey(key: string): Promise<Chave>;
-  list(): Promise<Chave>;
+  list(): Promise<Chave[]>;
 }
 
-export { IChavesRepository };
+export { IChavesRepository, ICreateChaveDTO };
