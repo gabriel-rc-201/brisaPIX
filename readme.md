@@ -30,7 +30,7 @@
     - O sistema deve ser capaz de enviar um email notificando o envio e recebimento de um pix.
     - O email de chegada deve ter o valor recebido, o nome de quem enviou e a data.
     - O email de envio deve ter o valor enviado, o nome de quem recebeu e a data.
-  - Adicionar tratamento de erros de maneira global
+  - [x] Adicionar tratamento de erros de maneira global
 
 - **Bonus**
   - Adicionar um `docker-compose` e um `Dockerfile`.
