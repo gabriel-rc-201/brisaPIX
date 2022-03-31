@@ -1,5 +1,12 @@
 import { User } from "modules/user/entities/User";
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from "typeorm";
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryColumn,
+} from "typeorm";
 
 @Entity("trasacoes")
 class Trasacao {
@@ -22,6 +29,9 @@ class Trasacao {
 
   @Column()
   valor: number;
+
+  @CreateDateColumn()
+  created_at: Date;
 }
 
 export { Trasacao };
