@@ -1,11 +1,11 @@
 import { Transacao } from "modules/transacao/entities/Transacao";
 import { getRepository, Repository } from "typeorm";
 import {
-  ICreateTrasacaoDTO,
-  ITrasacoesRepository,
-} from "../ITrasacoesRepository";
+  ICreateTransacaoDTO,
+  ITransacoesRepository,
+} from "../ITransacoesRepository";
 
-class TrasacoesRepository implements ITrasacoesRepository {
+class TransacoesRepository implements ITransacoesRepository {
   private repository: Repository<Transacao>;
 
   constructor() {
@@ -19,7 +19,7 @@ class TrasacoesRepository implements ITrasacoesRepository {
     valor,
     user_reciever_chave,
     user_sender_chave,
-  }: ICreateTrasacaoDTO): Promise<void> {
+  }: ICreateTransacaoDTO): Promise<void> {
     const transacao = this.repository.create({
       id,
       user_sender_id,
@@ -38,4 +38,4 @@ class TrasacoesRepository implements ITrasacoesRepository {
   }
 }
 
-export { TrasacoesRepository };
+export { TransacoesRepository };

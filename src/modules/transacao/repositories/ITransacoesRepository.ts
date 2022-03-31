@@ -1,6 +1,6 @@
 import { Transacao } from "../entities/Transacao";
 
-interface ICreateTrasacaoDTO {
+interface ICreateTransacaoDTO {
   id?: string;
   user_sender_id: string;
   user_reciever_id: string;
@@ -9,9 +9,9 @@ interface ICreateTrasacaoDTO {
   user_reciever_chave: string;
 }
 
-interface ITrasacoesRepository {
-  create(data: ICreateTrasacaoDTO): Promise<void>;
+interface ITransacoesRepository {
+  create(data: ICreateTransacaoDTO): Promise<void>;
   listByUserSenderId(user_sender_id: string): Promise<Transacao[]>;
 }
 
-export { ITrasacoesRepository, ICreateTrasacaoDTO };
+export { ITransacoesRepository, ICreateTransacaoDTO };
