@@ -13,7 +13,7 @@
 
 - **Intermediário**
 
-  - Requisitos
+  - [x] Requisitos
     - [x] O sistema deve ser capaz de cadastrar chaves PIX para os usuários já cadastrados.
     - [x] Uma chave não poderá ser cadastrada mais de uma vez.
     - [x] Cada usuário poderá ter no máximo 3 chaves.
