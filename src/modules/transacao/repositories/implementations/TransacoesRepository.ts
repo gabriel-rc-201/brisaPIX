@@ -1,4 +1,4 @@
-import { Transacao } from "modules/trasacao/entities/Transacao";
+import { Transacao } from "modules/transacao/entities/Transacao";
 import { getRepository, Repository } from "typeorm";
 import {
   ICreateTrasacaoDTO,
