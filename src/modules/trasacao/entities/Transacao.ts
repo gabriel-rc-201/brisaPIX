@@ -7,9 +7,10 @@ import {
   ManyToOne,
   PrimaryColumn,
 } from "typeorm";
+import { v4 as uuidV4 } from "uuid";
 
-@Entity("trasacoes")
-class Trasacao {
+@Entity("transacoes")
+class Transacao {
   @PrimaryColumn()
   id?: string;
 
@@ -32,6 +33,16 @@ class Trasacao {
 
   @CreateDateColumn()
   created_at: Date;
+
+  @Column()
+  user_sender_chave: string;
+
+  @Column()
+  user_reciever_chave: string;
+
+  constructor() {
+    if (!this.id) this.id = uuidV4();
+  }
 }
 
-export { Trasacao };
+export { Transacao };
