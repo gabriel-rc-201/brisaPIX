@@ -7,9 +7,7 @@ class ChavesRepository implements IChavesRepository {
   private repository: Repository<Chave>;
 
   constructor() {
-    console.log("entrei no constructor");
     this.repository = getRepository(Chave);
-    console.log(this.repository);
   }
 
   async create({ id, key, user_id }: ICreateChaveDTO): Promise<void> {
