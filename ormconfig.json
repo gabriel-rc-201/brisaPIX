@@ -7,7 +7,8 @@
   "database": "brisapix",
   "entities": [
     "./src/modules/user/entities/*.ts",
-    "./src/modules/chave/entities/*.ts"
+    "./src/modules/chave/entities/*.ts",
+    "./src/modules/trasacao/entities/*.ts"
   ],
   "migrations": ["./src/database/migrations/*.ts"],
   "cli": {
