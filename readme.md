@@ -34,7 +34,8 @@
 
 - **Bonus**
   - Adicionar um `docker-compose` e um `Dockerfile`.
-  - Adicionar o diagrama do banco de dados.
+  - [x] Adicionar o diagrama do banco de dados.
+        ![diagrama do banco de dados](./src/database/diagrama%20do%20banco%20de%20dados.png)
 
 ## Entidades :pencil2:
 
@@ -42,5 +43,5 @@
   - [x] O usuário deve possuir nome (nome do usuário), telefone (telefone do usuário), email e um id.
 - [x] Chaves.
   - [x] A entidade chaves deve possuir um valor (referente a chave a ser salva), id e a relação com o usuário dono da chave.
-- Transações.
-  - A transação deve possuir um valor (referente ao valor em R$ da transação), relação com quem envia e quem recebe o PIX (usuário que envia e usuário que recebe o PIX) e um id.
+- [x] Transações.
+  - [x] A transação deve possuir um valor (referente ao valor em R$ da transação), relação com quem envia e quem recebe o PIX (usuário que envia e usuário que recebe o PIX) e um id.
