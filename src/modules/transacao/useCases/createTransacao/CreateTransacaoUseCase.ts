@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 
 import { ITransacoesRepository } from "../../repositories/ITransacoesRepository";
 import { IChavesRepository } from "modules/chave/repositories/IChavesRepository";
-import { AppError } from "errors/AppError";
+import { AppError } from "../../../../errors/AppError";
 
 interface IData {
   valor: number;
