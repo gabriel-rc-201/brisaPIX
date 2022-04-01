@@ -11,7 +11,7 @@
 - [x] Adicionar arquivo de rotas do Insomnia
 - [x] Adicionar migrations
 
-- **Intermediário**
+- [x] **Intermediário**
 
   - [x] Requisitos
     - [x] O sistema deve ser capaz de cadastrar chaves PIX para os usuários já cadastrados.
@@ -22,7 +22,14 @@
     - [x] Cada transação deve conter a chave do usuário que envia e do usuário que recebe o PIX, além do valor, claro.
     - [x] O sistema deve listar as transações feitas por um usuário
     - [x] O sistema deve ser capaz de persistir essas informações em um banco de dados relacional.
-  - Adicionar testes unitários
+  - [x] Adicionar testes unitários
+    - os testes unitários foram adicionados mas alguns não deram certo, embora a aplicação esteja funcionando corretamente, devo ter errado em algum canto, mas não consegui encontrar o erro no tempo determinado.
+      - os testes feitos foram:
+        - para a criação de usuário; e
+        - para criação de chaves.
+      - os q não deram certo foram:
+        - criação de transações; e
+        - listagem de transações.
 
 - **Avançado**
 
@@ -33,7 +40,8 @@
   - [x] Adicionar tratamento de erros de maneira global
 
 - **Bonus**
-  - Adicionar um `docker-compose` e um `Dockerfile`.
+  - Adicionar um `docker-compose` e um `Dockerfile`.  
+    Embora eu tenha desenvolvido o projeto utilizando o `postgres` em um `container docker` acabei não fazendo um `docker-compose` e um `Dockerfile`, por falta de confiança nas minhas habilidades com essas ferramentas.
   - [x] Adicionar o diagrama do banco de dados.
         ![diagrama do banco de dados](./src/database/diagrama%20do%20banco%20de%20dados.png)
 
