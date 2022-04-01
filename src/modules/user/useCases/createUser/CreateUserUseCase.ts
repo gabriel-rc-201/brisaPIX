@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 
 import { IUserRepository } from "modules/user/repositories/IUsersRepository";
 import { ICreateUserDTO } from "modules/user/dtos/ICreateUserDTO";
-import { AppError } from "errors/AppError";
+import { AppError } from "../../../../errors/AppError";
 
 @injectable()
 class CreateUserUseCase {
