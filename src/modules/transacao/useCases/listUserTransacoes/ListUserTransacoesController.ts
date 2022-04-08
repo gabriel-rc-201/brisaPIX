@@ -5,12 +5,12 @@ import { ListUserTransacoesUseCase } from "./ListUserTransacoesUseCase";
 
 class ListUserTransacoesController {
   async handle(req: Request, res: Response): Promise<Response> {
-    const { user_sender_id } = req.body;
+    const { uuid } = req.params;
     const listUserTransacoesUseCase = container.resolve(
       ListUserTransacoesUseCase
     );
 
-    const transacoes = await listUserTransacoesUseCase.execute(user_sender_id);
+    const transacoes = await listUserTransacoesUseCase.execute(uuid);
 
     return res.status(200).json(transacoes);
   }
