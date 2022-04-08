@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  database_brisapix:
+    image: postgres
+    container_name: database_brisapix
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=brisa
+      - POSTGRES_DB=brisapix
+    volumes:
+      - pgdata:/data/postgres
+  app:
+    build: .
+    container_name: brisapix
+    ports:
+      - 3333:3333
+    volumes:
+      - .:/usr/app
+    links:
+      - database_brisapix
+    depends_on:
+      - database_brisapix
+
+volumes:
+  pgdata:
+    driver: local

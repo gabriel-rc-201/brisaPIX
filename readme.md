@@ -39,9 +39,8 @@
     - [x] O email de envio deve ter o valor enviado, o nome de quem recebeu e a data.
   - [x] Adicionar tratamento de erros de maneira global
 
-- **Bonus**
-  - Adicionar um `docker-compose` e um `Dockerfile`.  
-    Embora eu tenha desenvolvido o projeto utilizando o `postgres` em um `container docker` acabei não fazendo um `docker-compose` e um `Dockerfile`, por falta de confiança nas minhas habilidades com essas ferramentas.
+- [x] **Bonus**
+  - [x] Adicionar um `docker-compose` e um `Dockerfile`.
   - [x] Adicionar o diagrama do banco de dados.
         ![diagrama do banco de dados](./src/database/diagrama%20do%20banco%20de%20dados.png)
 
