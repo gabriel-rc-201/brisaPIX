@@ -1,0 +1,20 @@
+<style>
+  .container { width: 800px; justify-content: center; align-items: center;
+  align-content: center; display: flex; flex-direction: column; }
+</style>
+
+<div class="container">
+  <label>Olá <strong> {{variables.name}}</strong>! </label>
+
+  <br />
+  <br />
+  <p>Você recebeu um PIX no valor de R$
+    {{variables.valor}}
+    de
+    {{variables.sender}}
+    em:
+    {{variables.date}}
+  </p>
+
+  <strong>BrisaPIX</strong>
+</div>

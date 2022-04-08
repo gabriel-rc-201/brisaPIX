@@ -31,12 +31,12 @@
         - criação de transações; e
         - listagem de transações.
 
-- **Avançado**
+- [x] **Avançado**
 
-  - Requisitos
-    - O sistema deve ser capaz de enviar um email notificando o envio e recebimento de um pix.
-    - O email de chegada deve ter o valor recebido, o nome de quem enviou e a data.
-    - O email de envio deve ter o valor enviado, o nome de quem recebeu e a data.
+  - [x] Requisitos
+    - [x] O sistema deve ser capaz de enviar um email notificando o envio e recebimento de um pix.
+    - [x] O email de chegada deve ter o valor recebido, o nome de quem enviou e a data.
+    - [x] O email de envio deve ter o valor enviado, o nome de quem recebeu e a data.
   - [x] Adicionar tratamento de erros de maneira global
 
 - **Bonus**
