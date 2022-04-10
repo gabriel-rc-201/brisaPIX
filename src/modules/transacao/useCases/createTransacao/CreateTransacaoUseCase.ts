@@ -31,32 +31,32 @@ class CreateTransacaoUseCase {
     user_sender_chave,
     user_reciever_chave,
   }: IData): Promise<void> {
-    const user_sender = await this.chavesRepository.findChaveByKey(
+    const user_sender_key = await this.chavesRepository.findChaveByKey(
       user_sender_chave
     );
 
-    if (!user_sender)
+    if (!user_sender_key)
       throw new AppError(
-        "transação não autorizada, usuário não encontrado!!!",
+        "transação não autorizada, chave não encontrada!!!",
         401
       );
 
-    const user_reciever = await this.chavesRepository.findChaveByKey(
+    const user_reciever_key = await this.chavesRepository.findChaveByKey(
       user_reciever_chave
     );
 
-    if (!user_reciever)
+    if (!user_reciever_key)
       throw new AppError(
-        "transação não autorizada, usuário não encontrado!!!",
+        "transação não autorizada, chave não encontrada!!!",
         401
       );
 
     await this.transacoesRepository.create({
       valor,
       user_reciever_chave,
-      user_reciever_id: user_reciever.user_id,
+      user_reciever_id: user_reciever_key.user_id,
       user_sender_chave,
-      user_sender_id: user_sender.user_id,
+      user_sender_id: user_sender_key.user_id,
     });
 
     // envio de email
