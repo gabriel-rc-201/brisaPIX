@@ -1,3 +1,18 @@
+## Como rodar
+
+verifique se tem o `docker` e o `docker-compose` instalado  
+na raiz do projeto rode o seguinte comando:
+
+```
+docker-compose up -d
+```
+
+para ver os logs da aplicação use o seguinte comando:
+
+```
+docker logs brisapix -f
+```
+
 ## Sobre o desafio :pushpin:
 
 - O desafio consiste em desenvolver uma API REST para o sistema de transações do BrisaPIX.
@@ -31,6 +46,7 @@
     - [x] O sistema deve ser capaz de enviar um email notificando o envio e recebimento de um pix.
     - [x] O email de chegada deve ter o valor recebido, o nome de quem enviou e a data.
     - [x] O email de envio deve ter o valor enviado, o nome de quem recebeu e a data.
+          **Nota:** o envio de email foi feito para emails fakes, então quando ele for realizado será enviado um link através do `console.log` para ver o email enviado
   - [x] Adicionar tratamento de erros de maneira global
 
 - [x] **Bonus**
