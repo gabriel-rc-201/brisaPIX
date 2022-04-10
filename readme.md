@@ -1,17 +1,25 @@
 ## Como rodar
 
-verifique se tem o `docker` e o `docker-compose` instalado  
-na raiz do projeto rode o seguinte comando:
+Verifique se tem o `docker` e o `docker-compose` instalados.  
+Na raiz do projeto rode o seguinte comando:
 
 ```
 docker-compose up -d
 ```
 
-para ver os logs da aplicação use o seguinte comando:
+Para ver os logs da aplicação use o seguinte comando:
 
 ```
 docker logs brisapix -f
 ```
+
+Assim o sistema estará rodando em um container docker.
+
+Para rodar os testes siga os seguintes passos:
+
+1. instale as dependencias rodando o comando: `yarn`;
+1. comente a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts`;
+1. rode o comando: `yarn test`;
 
 ## Sobre o desafio :pushpin:
 
@@ -38,7 +46,7 @@ docker logs brisapix -f
     - [x] O sistema deve listar as transações feitas por um usuário
     - [x] O sistema deve ser capaz de persistir essas informações em um banco de dados relacional.
   - [x] Adicionar testes unitários
-    > na hora de rodar os testes tem q comentar a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts` pq o constructor do `sendEmailService` roda uma função assincrona que não da para ser executada durante os testes, visto que não podemos colocar async no constructor de uma classe.
+    > na hora de rodar os testes tem q comentar a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts` paorque o constructor do `sendEmailService` roda uma função assincrona que não dá para ser executada durante os testes, visto que não podemos colocar async no constructor de uma classe.
 
 - [x] **Avançado**
 
