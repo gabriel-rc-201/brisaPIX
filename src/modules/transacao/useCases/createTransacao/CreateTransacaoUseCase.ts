@@ -65,57 +65,59 @@ class CreateTransacaoUseCase {
     // executada durante os testes, visto que não podemos colocar async no
     // constructor de uma classe.
 
-    // const sender = await this.usersRepository.findById(user_sender.user_id);
+    const sender = await this.usersRepository.findById(user_sender_key.user_id);
 
-    // const reciever = await this.usersRepository.findById(user_reciever.user_id);
+    const reciever = await this.usersRepository.findById(
+      user_reciever_key.user_id
+    );
 
-    // const mailSender = resolve(
-    //   __dirname,
-    //   "..",
-    //   "..",
-    //   "..",
-    //   "..",
-    //   "views",
-    //   "emails",
-    //   "mailSender.hbs"
-    // );
+    const mailSender = resolve(
+      __dirname,
+      "..",
+      "..",
+      "..",
+      "..",
+      "views",
+      "emails",
+      "mailSender.hbs"
+    );
 
-    // const mailReciever = resolve(
-    //   __dirname,
-    //   "..",
-    //   "..",
-    //   "..",
-    //   "..",
-    //   "views",
-    //   "emails",
-    //   "mailReciever.hbs"
-    // );
+    const mailReciever = resolve(
+      __dirname,
+      "..",
+      "..",
+      "..",
+      "..",
+      "views",
+      "emails",
+      "mailReciever.hbs"
+    );
 
-    // // email to sender
-    // await sendEmaiService.execute(
-    //   sender.email,
-    //   "você enviou um pix usando BrisaPIX!!!",
-    //   {
-    //     name: sender.nome,
-    //     valor,
-    //     reciever: reciever.nome,
-    //     date: Date(),
-    //   },
-    //   mailSender
-    // );
+    // email to sender
+    await sendEmaiService.execute(
+      sender.email,
+      "você enviou um pix usando BrisaPIX!!!",
+      {
+        name: sender.nome,
+        valor,
+        reciever: reciever.nome,
+        date: Date(),
+      },
+      mailSender
+    );
 
-    // // email to reciever
-    // await sendEmaiService.execute(
-    //   reciever.email,
-    //   "você recebeu um pix!!!",
-    //   {
-    //     name: reciever.nome,
-    //     valor,
-    //     sender: sender.nome,
-    //     date: Date(),
-    //   },
-    //   mailReciever
-    // );
+    // email to reciever
+    await sendEmaiService.execute(
+      reciever.email,
+      "você recebeu um pix!!!",
+      {
+        name: reciever.nome,
+        valor,
+        sender: sender.nome,
+        date: Date(),
+      },
+      mailReciever
+    );
 
     // comentar até aqui
   }
