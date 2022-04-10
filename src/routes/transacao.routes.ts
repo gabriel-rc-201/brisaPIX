@@ -9,10 +9,9 @@ const createTransacaoController = new CreateTransacaoController();
 const listUserTransacoesController = new ListUserTransacoesController();
 
 transacaoRoutes.post("/", createTransacaoController.handle);
-transacaoRoutes.get("/:uuid", listUserTransacoesController.handle);
-
 transacaoRoutes.get("/hello", (req: Request, res: Response) => {
   return res.status(200).json({ message: "hello from transação" });
 });
+transacaoRoutes.get("/:uuid", listUserTransacoesController.handle);
 
 export { transacaoRoutes };

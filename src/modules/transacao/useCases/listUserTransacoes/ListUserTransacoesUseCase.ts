@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 
 import { ITransacoesRepository } from "modules/transacao/repositories/ITransacoesRepository";
 import { Transacao } from "modules/transacao/entities/Transacao";
+import { AppError } from "errors/AppError";
 
 @injectable()
 class ListUserTransacoesUseCase {

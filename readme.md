@@ -23,13 +23,7 @@
     - [x] O sistema deve listar as transações feitas por um usuário
     - [x] O sistema deve ser capaz de persistir essas informações em um banco de dados relacional.
   - [x] Adicionar testes unitários
-    - os testes unitários foram adicionados mas alguns não deram certo, embora a aplicação esteja funcionando corretamente, devo ter errado em algum canto, mas não consegui encontrar o erro no tempo determinado.
-      - os testes feitos foram:
-        - para a criação de usuário; e
-        - para criação de chaves.
-      - os q não deram certo foram:
-        - criação de transações; e
-        - listagem de transações.
+    > na hora de rodar os testes tem q comentar a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts` pq o constructor do `sendEmailService` roda uma função assincrona que não da para ser executada durante os testes, visto que não podemos colocar async no constructor de uma classe.
 
 - [x] **Avançado**
 
