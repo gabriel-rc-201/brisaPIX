@@ -21,6 +21,18 @@ Para rodar os testes siga os seguintes passos:
 1. comente a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts`;
 1. rode o comando: `yarn test`;
 
+## Tecnologias :rocket:
+
+- [Express](https://expressjs.com/pt-br/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Typeorm](https://typeorm.io/#/)
+- [Postgres](https://www.postgresql.org/)
+- [Insomnia](https://insomnia.rest/)
+- [Nodemailer](https://nodemailer.com/about/)
+- [Jest](https://jestjs.io/pt-BR/)
+- [Docker](https://www.docker.com/)
+- REST
+
 ## Sobre o desafio :pushpin:
 
 - O desafio consiste em desenvolver uma API REST para o sistema de transações do BrisaPIX.
