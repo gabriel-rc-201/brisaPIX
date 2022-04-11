@@ -18,8 +18,9 @@ Assim o sistema estará rodando em um container docker.
 Para rodar os testes siga os seguintes passos:
 
 1. instale as dependencias rodando o comando: `yarn`;
-1. comente a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts`;
-1. rode o comando: `yarn test`;
+2. comente a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts`;
+   > o constructor do `sendEmailService` roda uma função assincrona que não dá para ser executada durante os testes, visto que não podemos colocar async no constructor de uma classe.
+3. rode o comando: `yarn test`;
 
 ## Tecnologias :rocket:
 
@@ -58,7 +59,7 @@ Para rodar os testes siga os seguintes passos:
     - [x] O sistema deve listar as transações feitas por um usuário
     - [x] O sistema deve ser capaz de persistir essas informações em um banco de dados relacional.
   - [x] Adicionar testes unitários
-    > na hora de rodar os testes tem q comentar a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts` paorque o constructor do `sendEmailService` roda uma função assincrona que não dá para ser executada durante os testes, visto que não podemos colocar async no constructor de uma classe.
+    > na hora de rodar os testes tem q comentar a parte de envio de email em `src/modules/transacao/useCases/CreateTransacaoUseCase.ts` porque o constructor do `sendEmailService` roda uma função assincrona que não dá para ser executada durante os testes, visto que não podemos colocar async no constructor de uma classe.
 
 - [x] **Avançado**
 
